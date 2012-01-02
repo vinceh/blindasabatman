@@ -1,0 +1,17 @@
+<div id='mainCenterWrap'class='mainwidth'>
+
+    <div id='mainTitle'>
+        BLIND BATMAN <br/>
+        DRAWING #<%= @bat.id %>
+    </div>
+    <div class='mainlinkWrap drawingLink'>
+        <%= link_to  "SEE MORE", {:controller => :main}, :class => 'mainLink' %>
+    </div>
+    <div class='mainlinkWrap drawingLink'>
+        <%= link_to  "LET ME TRY", {:controller => :batimages, :action => :newImage}, :class => 'mainLink' %>
+    </div>
+    <div class='showImageWrap'>
+        <div class='imgNumber'><%= @bat.id %></div>
+        <img src='<%= @bat.thumbnail %>'/>
+    </div>
+</div>

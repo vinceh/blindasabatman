@@ -1,0 +1,24 @@
+<div id='mainCenterWrap'class='mainwidth'>
+
+    <div id='mainTitle'>
+        BLIND AS <br/> A BATMAN
+    </div>
+
+    <div class='mainSentence'>
+        Draw Batman with your eyes closed.
+    </div>
+
+    <div class='mainlinkWrap'>
+            <%= link_to  "LET ME TRY", {:controller => :batimages, :action => :newImage}, :class => 'mainLink' %>
+    </div>
+
+    <% @images.reverse.each do |b| %>
+
+        <% if b.show %>
+            <%= link_to({:controller => :batimages, :action => :showImage, :id => b.id}, {:class => 'imgWrap'}) do %>
+              <div class='imgNumber'><%= b.id %></div>
+              <img src='<%= b.thumbnail %>'></img>
+            <% end %>
+        <% end %>
+    <% end %>
+</div>

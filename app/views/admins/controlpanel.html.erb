@@ -1,0 +1,21 @@
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<br/>
+<% end %>	
+YOU ARE LOGGED IN MY FRIEND
+<br/>
+<br/>
+<%= link_to "Logout", :action => :logout %> <br/>
+<hr/>
+
+<% @images.each do |b| %>
+
+    <img src='<%= b.thumbnail %>'></img>
+
+    <% if b.show %>
+        <%= link_to "Hide", :action => :hide, :id => b.id %>
+    <% else %>
+        <%= link_to "Show", :action => :show, :id => b.id %>
+    <% end %>
+<% end %>

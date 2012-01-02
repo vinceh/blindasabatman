@@ -1,0 +1,37 @@
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        prepareCanvas();
+        $('#new_batimage').submit(function() {
+            var oCanvas = document.getElementById("drawingCanvas");
+            $('#batimage_imageURL').val(oCanvas.toDataURL());
+        });
+    });
+
+</script>
+
+<div id='mainCenterWrap'class='mainwidth'>
+
+    <div id='mainTitle' class='newImageTitle'>
+            DRAW BATMAN
+    </div>
+    <div class='newWrapper'>
+
+
+        <div class='stepsWrapper'>
+            Close your eyes and draw Batman's face
+        </div>
+
+        <button id='clearButton' class='sitebutton-large'>CLEAR CANVAS</button>
+        <%= form_for @bat, :url => {:action => :createImage}, :html => { :multipart => true } do |f| %>
+        <div id='canvasDiv'></div>
+        <%= f.hidden_field :imageURL %>
+
+        <%=f.submit "DONE", :disable_with => 'MAKING...', :class => 'sitebutton-large', :id => 'newSubmit'%>
+        <% end %>
+
+
+    </div>
+</div>

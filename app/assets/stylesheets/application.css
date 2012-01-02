@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+body {
+    font-weight: 800;
+    margin: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.sitebutton-large {
+    font-weight: 800;
+    border: none;
+    font-size: 30px;
+}
+
+.sitelink, .sitebutton-large {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #eee;
+}
+
+.sitelink:hover, .sitebutton-large:hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.sitelink:visited {
+    text-decoration: none;
+    color: #666;
+}
+
+.mainwidth {
+    width: 1040px;
+}
+
+.footer {
+    color: #666;
+    font-size: 12px;
+    margin: 50px auto 30px auto;
+    text-align: right;
+}
+
+#mainCenterWrap {
+    padding-top: 50px;
+    margin: 0px auto;
+}
+
+#mainTitle {
+
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 100px;
+    margin-bottom: 50px;
+}
+
+.imgWrap {
+    position: relative;
+    border: 1px solid #888;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 23px;
+    text-decoration: none;
+    color: #aaa;
+}
+
+.imgNumber {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #aaa;
+}
+
+.imgWrap:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #aaaaaa;
+}
+
+.imgWrap:visited {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.imgWrap img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+.mainlinkWrap {
+    margin-bottom: 40px;
+}
+
+.mainLink {
+    font-size: 40px;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: #eee;
+}
+
+.mainLink:hover {
+    background-color: #ddd;
+}
+
+.mainLink:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.mainSentence {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* new image */
+
+.newImageTitle {
+}
+
+.stepsWrapper {
+    font-weight: 800;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.newWrapper {
+    margin: 0px auto;
+}
+
+
+#drawingCanvas {
+	border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#clearButton {
+    margin-bottom: 20px;
+}
+
+#newSubmit {
+    margin-top: 10px;
+}
+
+/* show image */
+
+.showImageWrap {
+    border: 1px solid #888;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.showImageWrap img {
+    margin: 10px;
+}
+
+.drawingLink {
+    display: inline-block;
+    margin-right: 20px;
+}
+
